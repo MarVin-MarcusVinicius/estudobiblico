@@ -71,6 +71,28 @@ body::before {
 /* When hero is present, add spacing to main container */
 .page-hero + .container { margin-top: 1rem; }
 
+/* Hero content (title + subtitle) */
+.page-hero .hero-content {
+  position: absolute;
+  left: 2rem;
+  bottom: 1.5rem;
+  z-index: 3;
+  color: var(--text);
+  text-shadow: 0 6px 18px rgba(2,6,23,0.7);
+  max-width: 66%;
+}
+.page-hero .hero-content h2 {
+  margin: 0 0 0.25rem; font-size: clamp(1.5rem, 3.6vw, 2.6rem);
+}
+.page-hero .hero-content .hero-sub {
+  margin: 0; color: var(--muted); font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+}
+
+@media (max-width: 600px) {
+  .page-hero { height: 34vh; }
+  .page-hero .hero-content { left: 1rem; right: 1rem; max-width: 100%; bottom: 1rem; }
+}
+
 .section { margin: 1rem 0 2rem; }
 h1, h2, h3 { margin: 0.5rem 0 0.75rem; }
 p { line-height: 1.6; color: var(--text); }
