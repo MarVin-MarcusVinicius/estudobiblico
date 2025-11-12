@@ -1,0 +1,76 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22c55e;
+  --accent-2: #38bdf8;
+  --chip: #374151;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif; }
+
+.container { max-width: 1000px; margin: 0 auto; padding: 1rem; }
+
+.site-header, .site-footer { background: var(--panel); padding: 1rem; border-bottom: 1px solid #1f2937; }
+.site-footer { border-top: 1px solid #1f2937; border-bottom: none; text-align: center; color: var(--muted); }
+
+.brand { display: flex; align-items: center; gap: 1rem; }
+.logo { width: 48px; height: 48px; object-fit: contain; }
+.tagline { margin: 0.25rem 0 0; color: var(--muted); }
+
+.top-nav a, .back { color: var(--text); text-decoration: none; margin-right: 1rem; }
+.top-nav a:hover, .back:hover { color: var(--accent-2); }
+
+.section { margin: 1rem 0 2rem; }
+h1, h2, h3 { margin: 0.5rem 0 0.75rem; }
+p { line-height: 1.6; color: var(--text); }
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+
+.card { background: var(--panel); padding: 1rem; border-radius: 12px; border: 1px solid #1f2937; }
+.card h3 { color: var(--accent); }
+.list { list-style: none; padding: 0; margin: 0.5rem 0; }
+.list li { margin: 0.35rem 0; }
+.list a { color: var(--accent-2); text-decoration: none; }
+.list a:hover { text-decoration: underline; }
+
+.reading .story { background: var(--panel); padding: 1.25rem; border-radius: 12px; border: 1px solid #1f2937; }
+.meta { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.chip { background: var(--chip); color: var(--text); padding: 0.25rem 0.5rem; border-radius: 999px; font-size: 0.85rem; }
+
+.block { margin: 1rem 0; }
+.verse { background: #0b1220; border: 1px solid #1f2937; padding: 0.75rem; border-radius: 10px; margin: 0.5rem 0; }
+.ref { color: var(--muted); margin: 0 0 0.25rem; font-weight: 600; }
+
+.bullets, .qa { list-style: none; padding: 0; margin: 0.5rem 0; }
+.bullets li, .qa li { padding: 0.5rem 0; border-bottom: 1px dashed #1f2937; }
+.bullets li:last-child, .qa li:last-child { border-bottom: none; }
+.guide { color: var(--muted); margin-top: 0.25rem; font-size: 0.95rem; }
+
+.steps { counter-reset: step; list-style: none; padding: 0; margin: 0.5rem 0; }
+.steps li { position: relative; padding-left: 2.25rem; margin: 0.5rem 0; }
+.steps li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0; top: 0;
+  background: var(--accent);
+  color: #0b1220;
+  width: 1.75rem; height: 1.75rem;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-weight: 700;
+}
+
+.presentation .slides { display: grid; gap: 0.5rem; grid-template-columns: 1fr; }
+.slide { border: 1px solid #1f2937; border-radius: 10px; padding: 0.75rem; background: #0b1220; }
+.tip { color: var(--muted); font-style: italic; }
+
+body.jesus-bg {
+  background-image: url('/bloque5-nuevo-testamento/jesucruz.png') no-repeat center center fixed;
+  background-size: cover;
+}
