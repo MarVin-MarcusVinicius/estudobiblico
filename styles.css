@@ -47,6 +47,30 @@ body::before {
 .top-nav a, .back { color: var(--text); text-decoration: none; margin-right: 1rem; }
 .top-nav a:hover, .back:hover { color: var(--accent-2); }
 
+/* Page hero (per-page character banner) */
+.page-hero {
+  width: 100%;
+  height: 42vh;
+  min-height: 220px;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+}
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(2,6,23,0.28), rgba(2,6,23,0.55));
+  pointer-events: none;
+}
+.site-header { position: relative; z-index: 2; }
+
+/* When hero is present, add spacing to main container */
+.page-hero + .container { margin-top: 1rem; }
+
 .section { margin: 1rem 0 2rem; }
 h1, h2, h3 { margin: 0.5rem 0 0.75rem; }
 p { line-height: 1.6; color: var(--text); }
