@@ -22,7 +22,10 @@ Cómo añadir la imagen de fondo (recomendado)
 - Coloca la imagen que quieres usar en `assets/` y nómbrala `background.jpg`.
   - Ruta esperada: `assets/background.jpg`
 - Si quieres usar otra imagen, edita `styles.css` en la regla `html, body { background-image: url("assets/background.jpg"); }` y cambia la ruta.
+ - He incluido una imagen sugerida en SVG (`assets/background.svg`) que se usará automáticamente como fallback si no hay `background.jpg`.
+   - Si prefieres usar tu propia imagen, sube `assets/background.jpg` y esa tendrá prioridad.
 - Opcional: ajusta la opacidad del overlay en la regla `body::before { background: rgba(2,6,23,0.45); }`.
+ - Opcional: ajusta la opacidad del overlay en la regla `body::before { background: rgba(2,6,23,0.45); }`.
 
 Cómo compartir con amigos
 - Asegúrate de que los cambios estén en la rama `main` del repo remoto en GitHub.

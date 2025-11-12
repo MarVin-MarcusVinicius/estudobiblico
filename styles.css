@@ -15,10 +15,11 @@ html, body {
   /* color fallback background + image; si falta la imagen se mostrará el gradiente */
   background-color: var(--bg);
   /* La imagen va encima del gradiente; si la imagen no está, el gradiente sirve como fallback */
-  background-image: url("assets/background.jpg"), linear-gradient(180deg, rgba(6,10,20,0.55), rgba(2,6,23,0.55)); /* coloca tu imagen en assets/ o ajusta la ruta */
-  background-size: cover, cover;
-  background-position: center, center;
-  background-repeat: no-repeat, no-repeat;
+  /* Preferencia: JPG (si el usuario sube), luego SVG (sugerida), luego gradiente fallback */
+  background-image: url("assets/background.jpg"), url("assets/background.svg"), linear-gradient(180deg, rgba(6,10,20,0.55), rgba(2,6,23,0.55)); /* coloca tu imagen en assets/ o ajusta la ruta */
+  background-size: cover, cover, cover;
+  background-position: center, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
   color: var(--text);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
   min-height: 100%;
